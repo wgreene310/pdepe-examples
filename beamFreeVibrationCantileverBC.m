@@ -1,4 +1,10 @@
 function beamFreeVibrationCantileverBC
+% NOTE: This example requires a fix to the R2019a version
+% of pdepe. Replace this line in pdepe:
+% D( c == 0, 2:nx-1) = 0; 
+% (line 256 in R2019a)
+% with this line:
+% D( c == 0, :) = 0;
 E=200e9;
 thick = .2;
 width = .1;
